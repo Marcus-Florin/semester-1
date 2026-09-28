@@ -11,15 +11,15 @@ You can complete this task on the worksheet pdf if you prefer.
 |     Command                 |     Explanation    |
 |-----------------------------|--------------------|
 |     pwd                     | shows the current location of the terminal |
-|     ls                      | |
-|     cd directory_name       | |
-|     cd ..                   | |
-|     cd -                    | |
-|     mkdir directory_name    | |
-|     touch filename          | |
-|     git status              | |
-|     git add -A              | |
-|     git commit -m ""        | |
-|     git push                | |
-|     git pull                | |
+|     ls                      | lists everything in the current directory |
+|     cd directory_name       | moves into a directory called directory_name |
+|     cd ..                   | moves up one directory level |
+|     cd -                    | moves down one directory level |
+|     mkdir directory_name    | makes a directory called directory_name|
+|     touch filename          | makes a file called filename |
+|     git status              | shows the current state of the directory - what's been changed since the last commit |
+|     git add -A              | stages the changes made, -A means for all |
+|     git commit -m ""        | bundles the changes into a 'commit', -m allows you to label this change |
+|     git push                | sends changes to the github server to be saved |
+|     git pull                | updates the local branch to the newest version |
 
