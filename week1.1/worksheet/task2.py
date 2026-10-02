@@ -13,7 +13,7 @@ print(f"Welcome to LeedsBank's savings calculator {name}!")
 try:
     amount_per_month = int(input(f"Okay {name}, how much do you want to save each month? "))
 except:
-    print("Invalid Input")
+    print("Invalid amount")
     exit()
 
 
