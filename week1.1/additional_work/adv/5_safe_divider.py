@@ -5,8 +5,21 @@
 - Only print the final answer when the calculation succeeds.
 """
 
-numerator_input = input("Enter the numerator: ")
-denominator_input = input("Enter the denominator: ")
+valid = False
+while not valid:
+    try:
+        numerator_input = int(input("Enter the numerator: "))
+        denominator_input = int(input("Enter the denominator: "))
+        if numerator_input == 0 or denominator_input == 0:
+            print("Please enter non-zero inputs.")
+        else:
+            valid = True
+    except:
+        print("Please enter inputs that are numbers with no decimals.")
+
+answer = numerator_input / denominator_input
+
+print(answer)
 
 # TODO: wrap the risky operations in a try/except block
 # TODO: convert the values to integers and perform the division

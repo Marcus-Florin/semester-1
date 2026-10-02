@@ -5,7 +5,23 @@
 - Extension: show the message length before and after cleaning.
 """
 
-raw_message = input("Type a message to tidy: ")
+raw_message = str(input("Type a message to tidy: "))
+
+raw_message_length = len(raw_message)
+
+clean_message = raw_message.lower()
+clean_message = clean_message.strip()
+clean_message = clean_message.title()
+
+clean_message_length = len(clean_message)
+
+print(f"""
+Your message length has been shrunk from {raw_message_length} to {clean_message_length} characters.
+
+Your clean message:
+
+{clean_message}
+""")
 
 # TODO: apply a sequence of string methods to produce a cleaned_message
 # Example methods: strip, title, replace, lower, upper
