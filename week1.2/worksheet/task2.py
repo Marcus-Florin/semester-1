@@ -3,11 +3,15 @@
 from util import read_numbers
 import sys
 
+
 numbers = read_numbers()
 
-minimum = min(numbers)
-maximum = max(numbers)
-average = sum(numbers) / len(numbers)
+try:
+    minimum = min(numbers)
+    maximum = max(numbers)
+    average = sum(numbers) / len(numbers)
+except:
+    sys.exit("Error: no numbers provided")
 
 numbers = sorted(numbers)
 
