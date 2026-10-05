@@ -15,6 +15,15 @@ print(food)
 
 # Add an item to fruit
 
+fruit.add("strawberry")
+print(fruit)
+
 # Remove an item from vegetables
 
+vegetables.pop()
+print(vegetables)
+
 # Find and display symmetric difference of the two sets
+
+both = fruit.symmetric_difference(vegetables)
+print(both)
