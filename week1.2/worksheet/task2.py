@@ -15,8 +15,10 @@ except:
 
 numbers = sorted(numbers)
 
+
+print(len(numbers)/2)
 if len(numbers) % 2 == 0:
-    median = (numbers[len(numbers)/2] + numbers[(len(numbers)/2)-1]) / 2
+    median = (numbers[int(len(numbers)/2)] + numbers[int((len(numbers)/2)-1)]) / 2
 else:
     median = numbers[int((len(numbers)/2) - 0.5)]
 
