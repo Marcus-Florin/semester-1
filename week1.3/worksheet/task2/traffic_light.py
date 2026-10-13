@@ -20,6 +20,8 @@ try:
 except:
     sys.exit("Error: Must provide a non-zero, positive integer.")
 
+print(f"Time {systime:03} State red")
+
 # Simulate the traffic light system up to time=maxtime in 1-second steps
 
 # At the end of each step you should output the time and state using the statement on line 14
