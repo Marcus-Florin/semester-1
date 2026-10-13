@@ -26,6 +26,8 @@ print(f"Time {systime:03} State red")
 
 # At the end of each step you should output the time and state using the statement on line 14
 
+systime += 1
+
 while maxtime != 0:
     for colour in range(len(states_colours)):
         for duration in range(states_durations[colour]):
