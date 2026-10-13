@@ -5,6 +5,7 @@ Name:
 """
 
 import sys
+from time import sleep
 
 states = { "red":4, "red_amber":3, "green":5, "amber":3 }
 states_durations = list(states.values())
@@ -19,16 +20,17 @@ try:
 except:
     sys.exit("Error: Must provide a non-zero, positive integer.")
 
-state = "red"
-
-print(states)
-print(states_durations)
-print(states_colours)
-print(f"Time {systime:03} State {state}")
-
 # Simulate the traffic light system up to time=maxtime in 1-second steps
 
 # At the end of each step you should output the time and state using the statement on line 14
 
-#while maxtime != 0:
-    #for a in range(0,states[1])
+while maxtime != 0:
+    for colour in range(len(states_colours)):
+        for duration in range(states_durations[colour]):
+            if maxtime != 0:
+                print(f"Time {systime:03} State {states_colours[colour]}")
+                maxtime -= 1
+                systime += 1
+            else:
+                sys.exit()
+
