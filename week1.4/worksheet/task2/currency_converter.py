@@ -33,5 +33,3 @@ def currency_converter(amount, from_currency, to_currency):
     else:
         
         return 0.0
-
-print(currency_converter(101,'GBP','CNY'))
