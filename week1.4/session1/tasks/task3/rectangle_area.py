@@ -1,10 +1,21 @@
 
 # function implementation
 
-def rectangle_area( ):  # define suitable input data
-    # ...               # implement the function
-    return              # return an appropriate value
+def rectangle_area(length,width):  
+    area = length * width
+    return area   
 
-# testing the function
+valid = False
 
-print(f"Area is {rectangle_area( )}")   # provide suitable data matching your inputs
+while not valid:
+    try:
+        length = int(input("Enter Length: "))
+        width = int(input("Enter Width: "))
+        if length <= 0 or width <= 0:
+            raise exception()
+        else:
+            valid = True
+    except:
+        print("Invalid Input")
+
+print(f"Area is {rectangle_area(length,width)}")   # provide suitable data matching your inputs

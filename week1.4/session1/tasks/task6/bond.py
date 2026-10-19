@@ -12,11 +12,19 @@ def isBond(intList):
     in the specified order.
     """
 
-    # pass is a Python keyword used as a placeholder for future code,
-    # meaning you need to delete pass to write your code.
-    # Nothing happens when pass is executed.
+    occurence = False
 
-    pass     # delete pass to write your code
+    intListSequence = [int for int in intList if int == 0 or int == 7]
+
+    for i in range(0,len(intListSequence)):
+        try:
+            if intListSequence[i] == 0 and intListSequence[i+1] == 0 and intListSequence[i+2] == 7:
+                occurence = True
+                break
+        except:
+            break
+
+    return occurence
 
 # Check if the following lines of code produce the correct output
 print(isBond([1, 2, 4, 0, 0, 7, 5]))   # True
