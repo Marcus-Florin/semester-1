@@ -34,6 +34,14 @@ def income_tax_calculator(annual_income):
         e.g round(tax, 1) 0.0 if annual_income is not a positive integer.
     """
 
+    annual_income_tax = 0
+
+    if annual_income > 0:
+
+        if annual_income
+
+
+
 
 # Check if the following lines produce the correct output
 print(income_tax_calculator(12000))     # 0.0
