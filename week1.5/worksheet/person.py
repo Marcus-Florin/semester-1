@@ -40,7 +40,9 @@ class Person:
         """
         Checks if today is the person's birthday, returns true if yes.
         """
-        if self.birth == date.today():
+        x = date.today()
+
+        if self.birth.day == x.day and self.birth.month == x.month:
             return True
 
         return False
