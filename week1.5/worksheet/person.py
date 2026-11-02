@@ -7,7 +7,7 @@ class Person:
     A Person, with a name and a date of birth.
     """
 
-    def __init__(self,name,date_of_birth):
+    def __init__(self,name,birth):
         """
         A Person, with a name and a date of birth.
         """
@@ -17,11 +17,11 @@ class Person:
         if name == "":
             raise ValueError("Name requires a value.")
 
-        if not isinstance(date_of_birth, date):
+        if not isinstance(birth, date):
             raise TypeError("Date of birth needs to be a date.")
 
         self.name = name
-        self.date_of_birth = date_of_birth
+        self.birth = birth
 
     def initials(self):
         """
@@ -40,7 +40,7 @@ class Person:
         """
         Checks if today is the person's birthday, returns true if yes.
         """
-        if self.date_of_birth == date.today():
+        if self.birth == date.today():
             return True
 
         return False
