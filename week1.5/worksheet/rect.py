@@ -10,7 +10,7 @@ class Rectangle:
         """
 
         #Check for integer input and positive values for width and height
-        if not type(width) == int and not type(height) == int:
+        if not isinstance(width, int) and not isinstance(height, int):
             raise TypeError("Width and height must be integers.")
         
         if width <= 0 or height <= 0:
@@ -39,13 +39,3 @@ class Rectangle:
         Returns the perimeter of the rectangle.
         """
         return 2 * (self.width + self.height)
-
-
-    # Implement methods is_square(), area() & perimeter() here
-    # (See README.md for details of what they should do)
-
-r1 = Rectangle(3, 4)
-
-print(f"Is r1 a square? {r1.is_square()}")
-print(f"Area of r1: {r1.area()}")
-print(f"Perimeter of r1: {r1.perimeter()}")
