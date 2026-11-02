@@ -39,3 +39,13 @@ class Shape:
 
 # Implement your Circle class here
 # Make sure that it inherits properly from Shape!
+
+class Circle(Shape):
+    """
+    Creates a circle with a given position, colour, and radius.
+    """
+
+    def __init__(self, position, colour, radius):
+        """
+        Creates a circle
+
