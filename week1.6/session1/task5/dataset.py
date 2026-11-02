@@ -42,11 +42,25 @@ class QuakeDataset:
         # each dictionary and convert them into the required types before
         # creating a Quake object and storing it in the list.
 
+        self.data.clear()
+
+        for earthquake in self.feed.reader():
+
+            when = earthquake["time"]
+            when = when.fromisoformat()
+            longitude = float(earthquake["longitude"])
+            latitude = float(earthquake["latitude"])
+            depth = float(earthquake["depth"])
+            magnitude = float(earthquake["mag"])
+
+            self.data.append(Quake(when, longitude, latitude, depth, magnitude))
+
+
     def __len__(self):
         """
         Returns the size of this dataset.
         """
-        # Write code here that returns the number of quakes downloaded
+        return len(self.data)
 
     def __str__(self):
         """
@@ -54,6 +68,8 @@ class QuakeDataset:
         """
         # Write code here to create and return a string representation
         # (Include number of quakes and details of the feed that was used)
+
+        return str(self.data)
 
     def mean_depth(self):
         """
@@ -69,8 +85,11 @@ class QuakeDataset:
         """
         Returns the mean magnitude of the quakes in this dataset.
         """
-        # Write code here that computes the mean magnitude of all the
-        # quakes currently in the dataset
+        if len(self.data) == 0:
+            raise QuakeDatasetError("dataset is empty")
+
+        total = sum(quake.magnitude for quake in self.data)
+        return total / len(self.data)
 
     def shallowest_quake(self):
         """
@@ -89,5 +108,11 @@ class QuakeDataset:
         """
         Returns details of the strongest quake in this dataset.
         """
-        # Write code here that finds and returns the strongest quake
-        # (i.e., the one with the largest magnitude)
+        if len(self.data) == 0:
+            raise QuakeDatasetError("dataset is empty")
+
+        strongest = self.data[0]
+        for quake in self.data[1:]:
+            if quake.magnitude > strongest.depth:
+                strongest = quake
+        return strongest

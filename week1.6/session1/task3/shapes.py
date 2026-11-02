@@ -11,7 +11,7 @@ class Shape:
     Superclass for different types of shape.
     """
 
-    def __init__(self, position, colour):
+    def __init__(self, position, colour="red"):
         """
         Creates a shape with the specified position & colour.
         """
@@ -47,5 +47,38 @@ class Circle(Shape):
 
     def __init__(self, position, colour, radius):
         """
-        Creates a circle
+        Creates a circle with a given position, colour, and radius.
+        """
+        super().__init__(position, colour) 
 
+        self.set_radius(radius)
+
+    def set_radius(self, radius):
+        """
+        Sets the radius of the circle to the given radius.
+        """
+        if not isinstance(radius, (int, float)):
+            raise TypeError("Supplied value must be a number")
+
+        if radius <= 0:
+            raise ValueError("Supplied value must be greater than zero")
+
+        self.radius = radius
+
+    def __str__(self):
+        """
+        Formats string output as required
+        """
+        return f"{self.colour} circle, radius {self.radius}, at {self.position}"
+
+    def area(self):
+        """
+        Calculates and returns the area of the circle.
+        """
+        return math.pi * (self.radius ** 2)
+
+    def perimeter(self):
+        """
+        Calculates and returns the perimeter of the circle.
+        """
+        return 2 * math.pi * self.radius
