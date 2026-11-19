@@ -20,8 +20,8 @@ We can fetch data for a single post from the API with
 `httpx https://httpbin.io/json​`
 
 Note the reply and identify:
-- HTTP status code
-- HTTP header
+- HTTP status code - `200 OK`
+- HTTP header - 
 - Data (this format is called JSON, we will discuss it next)
 
 ## Other response codes

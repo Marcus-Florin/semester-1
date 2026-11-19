@@ -3,7 +3,7 @@ import httpx
 import pandas as pd
 import matplotlib.pyplot as plt
 
-api_key="U6KXJTZC2E8VGH39PD7UMG4BZ"   # your API key
+api_key="9VAJVDF6LBLM57DHEP7HVEA7B"   # your API key
 
 city="Leeds"     # city location
 country="UK"     # country location
