@@ -2,8 +2,6 @@ import pandas
 
 data = pandas.read_csv("lifestyle_data.csv")
 
-# What data type is `data` as output from the `read_csv()` method?
-
 # For each of the following pieces of information, try and use pandas to find the answer from the dataset in 'data'
 # - You can open the csv file to see what data is available.
 # - Use the pandas documentation to explore functions that you can use.
@@ -11,7 +9,11 @@ data = pandas.read_csv("lifestyle_data.csv")
 
 # Find the total number of students
 
+print(len(data))
+
 # Find the mean average GPA of the students
+
+print(  data["GPA"].sum() / len(data) )
 
 # Find the standard deviation of how much sleep students get per day
 
