@@ -12,3 +12,7 @@
 
 -- And to see a count of the total number of tuples
 SELECT COUNT(*) as Cardinality FROM customers; 
+
+.schema drivers
+
+SELECT COUNT(*) FROM drivers
